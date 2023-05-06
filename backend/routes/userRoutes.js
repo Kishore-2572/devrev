@@ -47,14 +47,22 @@ userRouter.post('/booktickets', isAuth, async (req, res) => {
     if (flight['seatsBooked'] == 60) {
       res.status(404).send({ message: 'No available seats' });
     } else {
-      flight['seatsBooked'] = flight['seatsBooked'] + 1;
-      const updatedFlight = await flight.save();
-      const booking = new Bookingmodel({
+      const book = await Bookingmodel.findOne({
         userId: userId,
         flightId: flightId,
       });
-      await booking.save();
-      res.status(200).send({ message: 'seats booked' });
+      if (book) {
+        flight['seatsBooked'] = flight['seatsBooked'] + 1;
+        const updatedFlight = await flight.save();
+        const booking = new Bookingmodel({
+          userId: userId,
+          flightId: flightId,
+        });
+        await booking.save();
+        res.status(200).send({ message: 'seats booked' });
+      } else {
+        res.status(200).send({ message: 'Tickets has been Already booked' });
+      }
     }
   } catch (e) {
     res.status(500).send({ message: e.message });
