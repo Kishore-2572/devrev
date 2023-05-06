@@ -19,7 +19,7 @@ const Authentication = () => {
     }
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/signup',
+        'https://wild-cod-visor.cyclic.app/api/auth/signup',
         {
           name,
           email,
@@ -43,7 +43,7 @@ const Authentication = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/login',
+        'https://wild-cod-visor.cyclic.app/api/auth/login',
         {
           email: lemail,
           password: lpassword,

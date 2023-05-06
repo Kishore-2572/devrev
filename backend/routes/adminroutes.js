@@ -79,7 +79,6 @@ adminRouter.post('/checkflight', isAuth, async (req, res) => {
     const dateOfJourney = req.body.dateOfJourney;
     const departureTime = req.body.departureTime;
 
-
     const flight = await Flightmodel.findOne({
       $and: [
         { flightNumber: flightNumber },

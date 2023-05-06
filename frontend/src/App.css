@@ -1,7 +1,7 @@
 button:hover {
   cursor: pointer;
 }
-.disabled{
+.disabled {
   pointer-events: none;
   background-color: red;
 }
@@ -162,9 +162,9 @@ h1 {
     width: 100%;
   }
 
-  .flight-list,.uh-right {
+  .flight-list,
+  .uh-right {
     height: auto;
     overflow: visible;
   }
-
 }

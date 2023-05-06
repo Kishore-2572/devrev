@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
-const UserCard = ({data}) => {
+const UserCard = ({ data }) => {
   return (
-    <div className='user-card'>
+    <div className="user-card">
       <div>
         <h5>Name : </h5> <p>{data['name']} </p>
       </div>
@@ -13,7 +13,7 @@ const UserCard = ({data}) => {
         <h5>Mobile : </h5> <p>{data['mobile']} </p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default UserCard
+export default UserCard;

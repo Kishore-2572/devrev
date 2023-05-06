@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     const getUser = () => {
       if (!localStorage.getItem('user')) {
-        window.location.href = '/adminlogin';
+        window.location.href = '/auth';
       }
     };
 
@@ -23,7 +23,9 @@ const Home = () => {
 
   const getFlights = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/user/');
+      const response = await axios.get(
+        'https://wild-cod-visor.cyclic.app/api/user/'
+      );
       const { data } = response;
       setFlights(data);
     } catch (e) {
@@ -44,7 +46,7 @@ const Home = () => {
       const dateOfJourney = date + '/' + month + '/' + year;
       const user = JSON.parse(localStorage.getItem('user'));
       const response = await axios.post(
-        'http://localhost:5000/api/user/availableflights',
+        'https://wild-cod-visor.cyclic.app/api/user/availableflights',
         {
           fromCity: fromCity,
           toCity: toCity,
@@ -74,7 +76,7 @@ const Home = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'));
       const response = await axios.post(
-        'http://localhost:5000/api/user/mybookings',
+        'https://wild-cod-visor.cyclic.app/api/user/mybookings',
         {
           userId: user['_id'],
         },
@@ -102,7 +104,7 @@ const Home = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'));
       const response = await axios.post(
-        'http://localhost:5000/api/user/booktickets',
+        'https://wild-cod-visor.cyclic.app/api/user/booktickets',
         {
           userId: user['_id'],
           flightId: flightId,

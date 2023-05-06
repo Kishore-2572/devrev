@@ -8,7 +8,7 @@ const AdminLogin = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/adminlogin',
+        'https://wild-cod-visor.cyclic.app/api/auth/adminlogin',
         {
           email,
           password,
@@ -19,6 +19,7 @@ const AdminLogin = () => {
       window.location.href = '/admin';
     } catch (e) {
       const { response } = e;
+      console.log(e);
       const { data } = response;
       if (data) {
         alert(data['message']);
