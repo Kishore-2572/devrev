@@ -1,0 +1,170 @@
+button:hover {
+  cursor: pointer;
+}
+.disabled{
+  pointer-events: none;
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
+}
+.auth,
+.adminpage {
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+}
+
+.auth-signup,
+.auth-login {
+  width: 50%;
+  padding-top: 10%;
+}
+
+.auth-signup-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.ad-lo {
+  margin-top: 2rem;
+  width: 100%;
+  text-align: center;
+}
+.auth-signup-form,
+.add-flight td {
+  padding: 0.3rem;
+  text-align: start;
+}
+.ap-add-flight {
+  width: 50%;
+  height: auto;
+}
+.flight-list,
+.uh-right {
+  width: 50%;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.add-flight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.flight-card,
+.user-card {
+  width: 90%;
+  height: 10rem;
+  margin: 1rem 1rem;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  gap: 1rem;
+}
+
+.fc-header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.fc-city {
+  width: 100%;
+  display: flex;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  gap: 1rem;
+}
+
+.fc-fc,
+.fc-tc {
+  width: 15%;
+}
+.jh {
+  width: 70%;
+  text-align: center;
+}
+.jh hr {
+  height: 0.1rem;
+  background-color: black;
+}
+
+.fc-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fc-date > div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.ah-btns {
+  display: flex;
+  gap: 2rem;
+}
+
+.user-card {
+  padding: 1rem;
+  height: auto;
+}
+
+.user-card div {
+  display: flex;
+  gap: 2rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.user-home {
+  width: 100wh;
+  height: 100vh;
+  display: flex;
+}
+.uh-left,
+.uh-right {
+  width: 50%;
+}
+
+.uh-btns,
+.ad-btns {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 1000px) {
+  .auth,
+  .adminpage,
+  .user-home {
+    flex-direction: column;
+    overflow-y: scroll;
+  }
+
+  .auth-signup,
+  .auth-login,
+  .ap-add-flight,
+  .flight-list,
+  .uh-left,
+  .uh-right {
+    width: 100%;
+  }
+
+  .flight-list,.uh-right {
+    height: auto;
+    overflow: visible;
+  }
+
+}
