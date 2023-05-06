@@ -11,7 +11,7 @@ const app = express();
 mongoose
   .connect(process.env.MONGO_URL)
   .then(() => {
-    app.listen(5000, () => console.log(`DB connected & Server started`));
+    app.listen(process.env.PORT || 3000, () => console.log(`DB connected & Server started`));
   })
   .catch((e) => console.log(e));
 
