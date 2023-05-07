@@ -51,7 +51,7 @@ userRouter.post('/bookticket', isAuth, async (req, res) => {
         userId: userId,
         flightId: flightId,
       });
-      if (book) {
+      if (!book) {
         flight['seatsBooked'] = flight['seatsBooked'] + 1;
         const updatedFlight = await flight.save();
         const booking = new Bookingmodel({
