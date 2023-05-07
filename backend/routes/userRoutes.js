@@ -12,7 +12,7 @@ userRouter.get('/', async (req, res) => {
   }
 });
 
-userRouter.post('/availableflights', async (req, res) => {
+userRouter.post('/search', async (req, res) => {
   try {
     const date = req.body.date;
     const time = req.body.time;
@@ -37,7 +37,7 @@ userRouter.post('/availableflights', async (req, res) => {
   }
 });
 
-userRouter.post('/booktickets', isAuth, async (req, res) => {
+userRouter.post('/bookticket', isAuth, async (req, res) => {
   try {
     const userId = req.body.userId;
     const flightId = req.body.flightId;

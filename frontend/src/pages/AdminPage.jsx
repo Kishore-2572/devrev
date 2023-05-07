@@ -100,7 +100,7 @@ const AdminPage = () => {
       const dateOfJourney = date + '/' + month + '/' + year;
       const user = JSON.parse(localStorage.getItem('user'));
       const response = await axios.post(
-        'https://wild-cod-visor.cyclic.app/api/admin/checkflight',
+        'https://wild-cod-visor.cyclic.app/api/admin/search',
         {
           flightNumber: sflightNumber,
           dateOfJourney,
@@ -129,7 +129,7 @@ const AdminPage = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     try {
       const response = await axios.delete(
-        `https://wild-cod-visor.cyclic.app/api/admin/deleteflight/${flightId}`,
+        `https://wild-cod-visor.cyclic.app/api/admin/${flightId}`,
         {
           headers: { Authorization: `Bearer ${user['token']}` },
         }

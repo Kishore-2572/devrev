@@ -57,7 +57,7 @@ adminRouter.post('/addflight', isAuth, async (req, res) => {
   }
 });
 
-adminRouter.delete('/deleteflight/:flightId', isAuth, async (req, res) => {
+adminRouter.delete('/:flightId', isAuth, async (req, res) => {
   try {
     const flightid = req.params.flightId;
 
@@ -73,7 +73,7 @@ adminRouter.delete('/deleteflight/:flightId', isAuth, async (req, res) => {
   }
 });
 
-adminRouter.post('/checkflight', isAuth, async (req, res) => {
+adminRouter.post('/search', isAuth, async (req, res) => {
   try {
     const flightNumber = req.body.flightNumber;
     const dateOfJourney = req.body.dateOfJourney;

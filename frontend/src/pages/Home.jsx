@@ -46,7 +46,7 @@ const Home = () => {
       const dateOfJourney = date + '/' + month + '/' + year;
       const user = JSON.parse(localStorage.getItem('user'));
       const response = await axios.post(
-        'https://wild-cod-visor.cyclic.app/api/user/availableflights',
+        'https://wild-cod-visor.cyclic.app/api/user/search',
         {
           fromCity: fromCity,
           toCity: toCity,
@@ -104,7 +104,7 @@ const Home = () => {
     try {
       const user = JSON.parse(localStorage.getItem('user'));
       const response = await axios.post(
-        'https://wild-cod-visor.cyclic.app/api/user/booktickets',
+        'https://wild-cod-visor.cyclic.app/api/user/bookticket',
         {
           userId: user['_id'],
           flightId: flightId,
