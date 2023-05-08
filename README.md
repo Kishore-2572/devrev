@@ -44,10 +44,10 @@ While Authenticating **Jsonwebtoken(JWT)** is used and it is used to verify a va
 For frontend basic UI has been used as it focus majorly on backend
 
 ### User
-  * Authentication Page - contains both SignUp and SignIn Form
-  * Home Page - A form for searching flights and buttons for checking all available flights, to see history of bookings and logout. A list of flights based on user action
+  * [Authentication Page](https://devrev.onrender.com/auth) - contains both SignUp and SignIn Form -
+  * [Home Page](https://devrev.onrender.com/) - A form for searching flights and buttons for checking all available flights, to see history of bookings and logout. A list of flights based on user action
 ### Admin
-  * AdminLogin Page - To authenticate the admin, a simple login form
-  * AdminHome Page - A form for adding new flights to DB, A form for checking users bookings who booked a particular flight and a button for reset action. A list of flights and flights bookings list based on admin action
+  * [AdminLogin Page](https://devrev.onrender.com/adminlogin) - To authenticate the admin, a simple login form
+  * [AdminHome Page](https://devrev.onrender.com/admin) - A form for adding new flights to DB, A form for checking users bookings who booked a particular flight and a button for reset action. A list of flights and flights bookings list based on admin action
 
 
